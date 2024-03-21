@@ -18,7 +18,7 @@ For this lab we need:
 
 We used the robocar that we assembled in Lab 8 using the RedBoard, ultrasonic sensor, two motors, motor driver, and the wheels from the SparkFun Inventor's Kit.
 
-We first installed the PID_v2 library onto Arduino IDE running on the computer and opened the code that we used in Lab 8 to run the robocar by entering a direction and speed when prompted. We then needed to edit the code to include PID control. The complete code is labeled as lab9part1.ino in the files of this repository. 
+We first installed the PID_v2 library onto Arduino IDE running on the computer and opened the code that we used in Lab 8 to run the robocar by entering a direction and speed when prompted. We then needed to edit the code to include PID control. The complete code is labeled as lab9part1_copy_20240321175156.ino in the files of this repository. 
 
 We began by including the PID_v2 library. 
 ```c++
@@ -55,7 +55,7 @@ We then connected the Arduino RedBoard and the robocar to the computer to make s
 
 **Part Two: Keep your Distance**
 
-We then added to the code we worked on in Part One to make it so that the robocar will move forward until an object is within 15cm of the car, which in that case it will move backwards until the object is over 15cm away again. 
+We then added to the code we worked on in Part One to make it so that the robocar will move forward until an object is within 15cm of the car, which in that case it will move backwards until the object is over 15cm away again. Our code for this can be found in the files of this repository under lab9part2_copy_20240306160801.ino.
 
 To do this, we began by changing the values of setpoint, Kp, Kd, and Ki.
 ```c++
