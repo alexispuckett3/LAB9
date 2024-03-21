@@ -86,3 +86,6 @@ Within the loop function, we also added an if-else statement that will make the 
 We then connected the RedBoard and the robocar to the computer running Arduino IDE and tested our code. 
 
 ## Results/Conclusions:
+
+
+At the end of this lab, we learned how to use a PID in addition to learning more about the Arduino robocar that we used in previous labs. For part one of the lab the values that were required for the car to be connected to the PID were correct and matched up showing us that the car and the sensor were connected. For part two of this lab, we tested the car making sure that it moved forward. We also tested to make sure that when an object was placed in front of the car, the sensor would detect it, causing the car to move backward and away from the object. We did this simply by placing a laptop in front of the car. 
