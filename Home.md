@@ -51,12 +51,38 @@ We then printed the setpoint, measurement, and output to the serial port so that
  Serial.print(",");
  Serial.println(OUT);
 ```
-We then tested to see if the code worked and if the variables sent to the serial port were correct. 
+We then connected the Arduino RedBoard and the robocar to the computer to make sure the PID control worked properly. 
 
 **Part Two: Keep your Distance**
 
+We then added to the code we worked on in Part One to make it so that the robocar will move forward until an object is within 15cm of the car, which in that case it will move backwards until the object is over 15cm away again. 
 
+To do this, we began by changing the values of setpoint, Kp, Kd, and Ki.
+```c++
+double MEAS = 0;
+double OUT = 0;
+double setpoint = 15;
+double Kp = 10;
+double Ki = 1;
+double Kd = 1;
+``` 
+We then used the map function in Arduino IDE to map the values from the PID to the speed of the motors and set the measurement value equal to the distance the ultrasonic sensor measures. We put this within the loop function of our previous code, after the ultrasonic sensor gets the distance value. 
 
-## Results:
+```c++
+motorSpeed = map(OUT, 0, 225, 150, 255);
+MEAS = distance;
+``` 
+Within the loop function, we also added an if-else statement that will make the car move forward when the measurement is greater than the setpoint of 15cm, and make it move backwards if the measurement is less than 15cm.      
+```c++                 
+ if (MEAS > setpoint)    
+  { 
+   botDirection = "f";
+  }
+   else
+  {
+   botDirection = "b";
+  }
+``` 
+We then connected the RedBoard and the robocar to the computer running Arduino IDE and tested our code. 
 
-## Conclusion:
+## Results/Conclusions:
